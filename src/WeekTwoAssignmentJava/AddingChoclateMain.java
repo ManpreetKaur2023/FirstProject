@@ -7,7 +7,7 @@ public class AddingChoclateMain {
 
 
 		addingChoclate  choclate= new addingChoclate();
-		
+		choclate.initialChoclateInBox=50;
 		choclate.addChoclate();
 		
 	}

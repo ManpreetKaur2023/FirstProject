@@ -1,22 +1,37 @@
 package WeekTwoAssignmentJava;
+import java.util.Scanner;
 
 public class addingChoclate {
 
-	int initialChoclateInBox=27;
-	int counter;
+	int initialChoclateInBox;
+	int addMoreChoclate;
+	Scanner sc=new Scanner(System.in);
+	
 	
 	void addChoclate() {
 		
-		for(counter=1;counter<=7;counter++) {
+		while(initialChoclateInBox<=63-5) {
+			System.out.println("Number of choclates now in box is " +initialChoclateInBox);
+			System.out.println("You can add more choclates");
+			System.out.println("Press 1 to add more choclates");
+			addMoreChoclate=sc.nextInt();
 			
-			  initialChoclateInBox =initialChoclateInBox+5;
-			 System.out.println("Choclates after " +counter +" round are " + initialChoclateInBox);
-
+			if(addMoreChoclate==1) {
+				initialChoclateInBox+=5;
+				System.out.println( +initialChoclateInBox);
+			}
+			
+			else {
+				System.out.println("Wrong selection");
+				break;
+			}
 		}
+			
+			if(initialChoclateInBox>=63) {
+				System.out.println("Cannot add more choclates as box is filled already");
+			}
+			
 		
-		if(counter==8) {
-			System.out.println(" Cannot add choclates as number of choclates is exceeding 63");
-		}
 		
 	}
 	
