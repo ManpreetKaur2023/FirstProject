@@ -9,7 +9,7 @@ public class switchMain {
 		Switchprogram calculator=new Switchprogram();
 		
 		calculator.number1=2;
-		calculator.number2=2;
+		calculator.number2=3;
 		
 		String operation="multiply";
 		

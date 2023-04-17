@@ -9,6 +9,7 @@ public class JavaConditionMain {
 		//Question 1 Find greatest number
 		condition.findLargestNumber();
 		 
+		
 		 
 		// Question 2 Find discount
 		 condition.promoCode20=true;

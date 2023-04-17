@@ -13,7 +13,7 @@ public class ScannerClass {
 	
 	void checkPinIsCorrectUsingScanner() {
 		
-		for(int counter=1 ; counter<=3;counter++)
+		for( counter=1 ; counter<=3;counter++)
 		{
 			System.out.println("Enter the Pin");
 			enteredPin=sc.nextInt();
@@ -38,19 +38,24 @@ public class ScannerClass {
 			{
 				System.out.println("Pin is incorrect");
 				
+				
 			}
 			
-			}
 			
-		do {
-			System.out.println("Card is blocked");
-		}while(counter==4);
-			
-			
-			
-		}
 		
-	
+		}
+		 if(counter==4) {
+				System.out.println("Your card is locked");
+			}
+			
+			
+		
+			
+			
+			
+		
+		
+	}
 		
 	
 }
