@@ -175,8 +175,8 @@ public class CRSCalculator {
 		}
 	}
 	
-	void haveRelativeInCanada(String haveRelative) {
-		if (haveRelative.equals("y")) {
+	void haveRelativeInCanada(String relativeInCanada) {
+		if (relativeInCanada.equals("y")) {
 			relativeScore=5;
 			System.out.println(relativeScore);
 		}

@@ -37,15 +37,15 @@ public class CRSCalculatorMain {
 	     crscalculator.ieltWritingScore(ieltsWriting);
 	     
 	     System.out.println("Have relative in Canada(y/n)");
-	     String relativeInCanada=sc.nextLine();
+	     String relativeInCanada=sc.next();
 	     crscalculator.haveRelativeInCanada(relativeInCanada);
 	     
 	     System.out.println("Have you studied in Canada for atleast 2 Years(y/n)");
-	     String studyInCanada=sc.nextLine();
+	     String studyInCanada=sc.next();
 	     crscalculator.studyInCanada(studyInCanada);
 	     
 	     System.out.println("Have you worked in Canada for 1 Years(y/n)");
-	     String workInCanada=sc.nextLine();
+	     String workInCanada=sc.next();
 	     crscalculator.workInCanada(workInCanada);
 	    
 	     crscalculator.totalPoints();

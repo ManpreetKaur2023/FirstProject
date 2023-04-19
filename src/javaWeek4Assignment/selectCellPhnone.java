@@ -6,10 +6,10 @@ public class selectCellPhnone {
 
 	String [] samsungModelsPrice= {"25", "35","55","20"};
 	String[] samsungModels= {"S22", "S22+", "S22 Ultra", "S22FE"};
-	String[] appleModels= {"Iphone14", "Iphone14pro", "Iphone14promax", "Iphone14mini"};
+	String[] appleModels= {"Iphone 14", "Iphone 14 pro", "Iphone 14 pro max", "Iphone 14 mini"};
 	String [] appleModelsPrice= {"30", "40","65","25"};
 	String[] dataPrice= {"70","80","75"};
-	String[] dataPlanes= {"rogers","bell","telus"};
+	String[] dataPlans= {"rogers","bell","telus"};
 	
 	String costOfDataPlan;
 	String costOfPhone;
@@ -55,6 +55,9 @@ public class selectCellPhnone {
 				}
 				}
 		}
+		else {
+			System.out.println("Incorrect Input");
+		}
 	}
 	
 	
@@ -81,13 +84,17 @@ public class selectCellPhnone {
 				costOfPhone=appleModelsPrice[i];
 			}}
 			}
+		else {
+			System.out.println("Incorrect Input");
+		}
+		
 		
 	}
 	
 	void dataBill(String selectPlan) {
 		if(selectPlan.equals("rogers")) {
 			for(int i=0;i<dataPrice.length;i++) {
-				if(selectPlan.equals(dataPlanes[i])) {
+				if(selectPlan.equals(dataPlans[i])) {
 					System.out.println("Your monthly plane will be: $"+dataPrice[i]);
 					costOfDataPlan=dataPrice[i];
 				}
@@ -96,7 +103,7 @@ public class selectCellPhnone {
 		
 		if(selectPlan.equals("bell")) {
 			for(int i=0;i<dataPrice.length;i++) {
-				if(selectPlan.equals(dataPlanes[i])) {
+				if(selectPlan.equals(dataPlans[i])) {
 					System.out.println("Your monthly plane will be: $"+dataPrice[i]);
 					costOfDataPlan=dataPrice[i];
 				}
@@ -105,12 +112,15 @@ public class selectCellPhnone {
 		
 		if(selectPlan.equals("telus")) {
 			for(int i=0;i<dataPrice.length;i++) {
-				if(selectPlan.equals(dataPlanes[i])) {
+				if(selectPlan.equals(dataPlans[i])) {
 					System.out.println("Your monthly plane will be: $"+dataPrice[i]);					
 					 costOfDataPlan=dataPrice[i];
 									
 				}
 			}
+		}
+		else {
+			System.out.println("Incorrect Input");
 		}
 		
 	}
