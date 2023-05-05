@@ -21,24 +21,37 @@ public class AccountDetails {
 	public double getfundsAvailable() {
 		return fundsAvailable;
 
+		
 	}
 
-	boolean getATMPin(String enterdATMPin) {
-		boolean flag = false;
-		if (actualpin.equals(enterdATMPin)) {
-			flag = true;
+	public String getAtmPin(String enteredPin) {
+		if (actualpin.equals(enteredPin)) {
 		}
-
-		return flag;
+		return actualpin;
 	}
 
-	boolean getOnlineBankingPassword(String enteredBankingPassword) {
-		boolean flag = false;
-		if (onlineBankingPassword.equals(enteredBankingPassword)) {
-			flag = true;
+	public String getOnlinePassword(String enteredPassword) {
+		if (onlineBankingPassword.equals(enteredPassword)) {
 		}
-
-		return flag;
+		return onlineBankingPassword;
 	}
+	
+//	boolean getATMPin(String enterdATMPin) {
+//		boolean flag = false;
+//		if (actualpin.equals(enterdATMPin)) {
+//			flag = true;
+//		}
+//
+//		return flag;
+//	}
+
+//	boolean getOnlineBankingPassword(String enteredBankingPassword) {
+//		boolean flag = false;
+//		if (onlineBankingPassword.equals(enteredBankingPassword)) {
+//			flag = true;
+//		}
+//
+//		return flag;
+//	}
 
 }

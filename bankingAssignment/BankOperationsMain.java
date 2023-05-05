@@ -13,29 +13,33 @@ public class BankOperationsMain {
 		System.out.println("Which opertaion do you want to perform(ATM or OnlineBanking)");
 		String operation = sc.next();
 		double fundsAvailable = accountDetails.getfundsAvailable();
+		
 
 		switch (operation) {
 		case "ATM":
 			System.out.println("Enter ATM pin");
 			String enteredATMPin = sc.next();
+			
+			String pin=accountDetails.getAtmPin(enteredATMPin);
 
-			boolean pin = accountDetails.getATMPin(enteredATMPin);
-			if (pin) {
-				bankingOperations = new ATM(fundsAvailable);
+////			boolean pin = accountDetails.getATMPin(enteredATMPin);
+			if (pin.equals(enteredATMPin)) {
+				bankingOperations = new ATM(fundsAvailable,pin);
 			} else {
-				System.out.println("Incorrect PIN");
-				System.exit(0);
-			}
+			System.out.println("Incorrect PIN");
+			System.exit(0);
+		}
 			break;
 
 		case "OnlineBanking":
 			System.out.println("Enter Online Banking  Password");
-			String enteredBankingPin = sc.next();
+			String enteredBankingPassword = sc.next();
+			String password=accountDetails.getOnlinePassword(enteredBankingPassword);
 
-			boolean password = accountDetails.getOnlineBankingPassword(enteredBankingPin);
-			if (password) {
+			//boolean password = accountDetails.getOnlineBankingPassword(enteredBankingPin);
+			if (password.equals(enteredBankingPassword)) {
 
-				bankingOperations = new OnlineBanking(fundsAvailable);
+				bankingOperations = new OnlineBanking(fundsAvailable,password);
 			} else {
 				System.out.println("Incorrect Password");
 				System.exit(0);
@@ -48,7 +52,7 @@ public class BankOperationsMain {
 			break;
 		}
 
-		System.out.println("Deposit or Withdrawl");
+		System.out.println("Deposit / Withdrawl / View Balance / Change Pin");
 		String actionToBePerformed = sc.next();
 
 		if (actionToBePerformed.equalsIgnoreCase("Withdrawl")) {
@@ -61,7 +65,13 @@ public class BankOperationsMain {
 		} else if (actionToBePerformed.equalsIgnoreCase("Balance")) {
 			
 			bankingOperations.viewBalance();
-		} else {
+		}
+        else if (actionToBePerformed.equalsIgnoreCase("ChangePin")) {
+			
+			bankingOperations.changePinPassword();
+		}
+		
+		else {
 			System.out.println("Incorrect action.");
 		}
 

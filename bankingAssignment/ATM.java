@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class ATM extends BankOperations {
 	Scanner sc = new Scanner(System.in);
-
 	double balance;
+	String pin;
+	String changedPin;
 
-	public ATM(double balance) {
+	public ATM(double balance, String pin) {
 		super();
 		this.balance = balance;
+		this.pin = pin;
 	}
 
 	@Override
@@ -39,4 +41,29 @@ public class ATM extends BankOperations {
 		System.out.println("Balance left in account: " + balance);
 	}
 
-}
+	@Override
+	public void changePinPassword() {
+		System.out.println("You can reset your pin");
+		
+//		System.out.println("Enter new Pin");
+//		changedPin = sc.next();
+		//for(int i=0;i<=3;i++) {
+			System.out.println("Enter new Pin");
+			changedPin = sc.next();
+		if (changedPin.equals(pin)) {
+			System.out.println("Old and new pin should be different");
+			//break;
+
+		}
+		
+		else if(changedPin.length()<4) {
+			System.out.println("Pin should have atleast 4 charcters");
+			//break;
+		}
+		
+		else {
+			System.out.println("Your new Pin is: "+changedPin);
+		}
+		
+	//}
+}}
