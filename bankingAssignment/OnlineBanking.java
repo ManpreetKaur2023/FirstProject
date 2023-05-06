@@ -35,7 +35,6 @@ public class OnlineBanking extends BankOperations {
 		balance = balance + amounttoToBeDeposited;
 		System.out.println(balance);
 	}
-
 	@Override
 	void viewBalance() {
 		System.out.println("Balance in account: " + balance);
@@ -44,24 +43,30 @@ public class OnlineBanking extends BankOperations {
 	@Override
 	public void changePinPassword() {
 		System.out.println("You can reset your Online Banking Password");
-		System.out.println("Enter new Password");
-		updatedPassword = sc.next();
-		if (updatedPassword.equals(password)) {
-			System.out.println("Old and new password should be different");
+		
+		for (int i = 0; i < 3; i++) {
+			
+			System.out.println("Enter new Password");
+			updatedPassword = sc.next();
+			
+			if (updatedPassword.equals(password)) {
+				System.out.println("Old and new password should be different");
 
-		}
-		else if(updatedPassword.length() < 8) {
-			System.out.println("Pin should have atleast 8 charcters");
+			} else if (updatedPassword.length() < 8) {
+				System.out.println("Pin should have atleast 8 charcters");
+
+			}
+
+			else if (updatedPassword.length() >= 8 && updatedPassword.contains("@") && updatedPassword.contains("$")
+					&& updatedPassword.contains("&")) {
+				System.out.println("Your update Online Banking Password is: " + updatedPassword);
+
+			}
+			else {
+				System.out.println("Your new password is: "+updatedPassword);
+				break;
+			}
 			
 		}
-		
-
-//		else if (updatedPassword.length() >= 8 && updatedPassword.contains("@") && updatedPassword.contains("$")  && updatedPassword.contains("&")) {
-//			System.out.println("Your update Online Banking Password is: "+updatedPassword);
-//
-//		}
-		if(updatedPassword.matches("&,@,$")) {
-System.out.println(updatedPassword);
-	}}
-
+	}
 }
