@@ -1,6 +1,6 @@
 package bankingAssignment;
 
-public  abstract class BankOperations {
+public abstract class BankOperations {
 
 	void withdrawAmount() {
 
@@ -14,5 +14,5 @@ public  abstract class BankOperations {
 
 	}
 
-	 public abstract void changePinPassword();
+	public abstract void changePinPassword();
 }

@@ -21,7 +21,6 @@ public class AccountDetails {
 	public double getfundsAvailable() {
 		return fundsAvailable;
 
-		
 	}
 
 	public String getAtmPin(String enteredPin) {
@@ -35,23 +34,13 @@ public class AccountDetails {
 		}
 		return onlineBankingPassword;
 	}
-	
-//	boolean getATMPin(String enterdATMPin) {
-//		boolean flag = false;
-//		if (actualpin.equals(enterdATMPin)) {
-//			flag = true;
-//		}
-//
-//		return flag;
-//	}
 
-//	boolean getOnlineBankingPassword(String enteredBankingPassword) {
-//		boolean flag = false;
-//		if (onlineBankingPassword.equals(enteredBankingPassword)) {
-//			flag = true;
-//		}
-//
-//		return flag;
-//	}
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+	public String getNameofAccountHolder() {
+		return nameofAccountHolder;
+	}
 
 }

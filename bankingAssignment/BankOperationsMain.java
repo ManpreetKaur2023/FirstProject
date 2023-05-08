@@ -8,9 +8,9 @@ public class BankOperationsMain {
 		BankOperations bankingOperations = null;
 		AccountDetails accountDetails = new AccountDetails("98765", "Manpreet", 5000, "1234", "abcd");
 
-		// AccountDetails("1234567","Aman",8000,"0989","qwerty");
+		// AccountDetails accountDetails = new AccountDetails("1234567","Aman",8000,"0989","qwerty");
 
-		// AccountDetails("9801","Asha",3000,"11189","hello");
+		// AccountDetails accountDetails = new AccountDetails("9801","Asha",3000,"11189","hello");
 
 		Scanner sc = new Scanner(System.in);
 		String accountNumber = accountDetails.getAccountNumber();

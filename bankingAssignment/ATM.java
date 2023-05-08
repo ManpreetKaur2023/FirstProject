@@ -44,26 +44,27 @@ public class ATM extends BankOperations {
 	@Override
 	public void changePinPassword() {
 		System.out.println("You can reset your pin");
-		
-//		System.out.println("Enter new Pin");
-//		changedPin = sc.next();
-		//for(int i=0;i<=3;i++) {
+
+		for (int i = 0; i < 3; i++) {
+
 			System.out.println("Enter new Pin");
 			changedPin = sc.next();
-		if (changedPin.equals(pin)) {
-			System.out.println("Old and new pin should be different");
-			//break;
+
+			if (changedPin.equals(pin)) {
+				System.out.println("Old and new pin should be different");
+
+			}
+
+			else if (changedPin.length() < 4) {
+				System.out.println("Pin should have atleast 4 charcters");
+
+			}
+
+			else {
+				System.out.println("Your new Pin is: " + changedPin);
+				break;
+			}
 
 		}
-		
-		else if(changedPin.length()<4) {
-			System.out.println("Pin should have atleast 4 charcters");
-			//break;
-		}
-		
-		else {
-			System.out.println("Your new Pin is: "+changedPin);
-		}
-		
-	//}
-}}
+	}
+}
